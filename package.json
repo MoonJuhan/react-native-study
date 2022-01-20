@@ -26,6 +26,15 @@
   "jest": {
     "preset": "react-native"
   },
+  "eslintConfig": {
+    "rules": {
+      "no-unused-vars": "off",
+      "no-empty": "off",
+      "no-undef": "off",
+      "vue/return-in-computed-property": "off",
+      "vue/no-side-effects-in-computed-properties": "off"
+    }
+  },
   "prettier": {
     "singleQuote": true,
     "semi": false,
