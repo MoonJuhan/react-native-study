@@ -3,12 +3,13 @@ import type { Node } from 'react'
 
 import { StyleSheet, Text, SafeAreaView, TextInput, Button } from 'react-native'
 
-const ViewLogin = (): Node => {
+const ViewLogin = ({ navigation }): Node => {
   const [id, onChangeId] = React.useState(null)
   const [password, onChangePassword] = React.useState(null)
 
   const onPressLearnMore = () => {
     console.log(`Button ${id} ${password}`)
+    navigation.navigate('Test')
   }
 
   return (
@@ -23,7 +24,7 @@ const ViewLogin = (): Node => {
       />
       <Button
         onPress={onPressLearnMore}
-        title="Learn More"
+        title="Login"
         color="#841584"
         accessibilityLabel="Learn more about this purple button"
       />
@@ -33,10 +34,12 @@ const ViewLogin = (): Node => {
 
 const styles = StyleSheet.create({
   viewLogin: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   input: {
+    width: '100%',
     height: 40,
     margin: 12,
     borderWidth: 1,
